@@ -1,0 +1,3 @@
+﻿  SerialPort.cpp
+D:\Others\Homework\CSAD\Lab2\client\SerialPort.cpp(73,63): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  client.vcxproj -> D:\Others\Homework\CSAD\Lab2\client\x64\Debug\client.exe
