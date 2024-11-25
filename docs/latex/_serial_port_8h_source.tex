@@ -1,0 +1,36 @@
+\doxysection{Serial\+Port.\+h}
+\hypertarget{_serial_port_8h_source}{}\label{_serial_port_8h_source}\index{client/SerialPort.h@{client/SerialPort.h}}
+\mbox{\hyperlink{_serial_port_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SERIAL\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_serial_port}{SerialPort}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_serial_port_a8c075fe67b7e57cd3c3958bacfec1dba}{SerialPort}}(\textcolor{keyword}{const}\ std::string\&\ portName);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_serial_port_a8e09f366ed9b26b0456b66ae7bd8c702}{\string~SerialPort}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_serial_port_a633a0c13c38f7e61b17ae920a45d75dd}{configurePort}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_serial_port_a70f35813096ff812defa33777495d08f}{sendMessage}}(\textcolor{keyword}{const}\ std::string\&\ message);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::string\ \mbox{\hyperlink{class_serial_port_a44be23a0bbaecb21862352df0f491a29}{receiveMessage}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ HANDLE\ serialHandle;\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ setPortState();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ setPortTimeouts();}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERIAL\_H}}
+
+\end{DoxyCode}

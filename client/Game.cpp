@@ -11,6 +11,14 @@
 
  /**
   * @brief Saves the current game state to a file.
+  * @param filename The name of the file to save the game state.
+  * @param mode The game mode (e.g., "Player vs Player", "Player vs AI").
+  * @param player1Move The move of Player 1.
+  * @param player2Move The move of Player 2.
+  * @param player1Score The score of Player 1.
+  * @param player2Score The score of Player 2.
+  *
+  * This function writes the game mode, players' moves, and their scores to a specified file, allowing the game to be resumed later.
   */
 void saveGameState(const std::string& filename, const std::string& mode, const std::string& player1Move, const std::string& player2Move, int player1Score, int player2Score) {
     std::ofstream outFile(filename);
@@ -28,6 +36,15 @@ void saveGameState(const std::string& filename, const std::string& mode, const s
 
 /**
  * @brief Loads a previously saved game state from a file.
+ * @param filename The name of the file to load the game state from.
+ * @param mode Reference to a string to store the loaded game mode.
+ * @param player1Move Reference to a string to store the loaded move of Player 1.
+ * @param player2Move Reference to a string to store the loaded move of Player 2.
+ * @param player1Score Reference to an integer to store the loaded score of Player 1.
+ * @param player2Score Reference to an integer to store the loaded score of Player 2.
+ * @return True if the game state was loaded successfully; false otherwise.
+ *
+ * This function reads the game mode, players' moves, and scores from the specified file, restoring the game to a previous state.
  */
 bool loadGameState(const std::string& filename, std::string& mode, std::string& player1Move, std::string& player2Move, int& player1Score, int& player2Score) {
     std::ifstream inFile(filename);
@@ -46,7 +63,11 @@ bool loadGameState(const std::string& filename, std::string& mode, std::string& 
 }
 
 /**
- * @brief Manages the main game loop.
+ * @brief Manages the main game loop and handles player interactions and game modes.
+ * @param serialPort A reference to the SerialPort object for sending and receiving messages to/from Arduino.
+ *
+ * The function provides options for starting a new game or continuing a previous one, allows players to choose a game mode, and handles player moves and game results.
+ * It supports multiple game modes, including Man vs Man, Man vs AI, and AI vs AI, and saves game progress after each round.
  */
 void playGame(SerialPort& serialPort) {
     std::string mode, player1Move, player2Move, result;
