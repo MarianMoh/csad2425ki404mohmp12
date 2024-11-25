@@ -1,2 +1,0 @@
-D:\Others\Homework\APKS\Lab2\client\x64\Debug\client.exe
-D:\Others\Homework\CSAD\Lab2\client\x64\Debug\client.exe
