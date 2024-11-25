@@ -2,7 +2,7 @@
 This repository was created to fulfill the learning objectives of the CSAD course. Taking into account the requirements, the repository name is csad2425ki404mohmp12.
 
 ### Task Details
-1. Create a GitHub repository with the name csad2425ki404mohmp12, where:
+1. Create a GitHub repository with the nаme csad2425ki404mohmp12, where:
 YY1: 24
 YY2: 25
 Group: ki404
