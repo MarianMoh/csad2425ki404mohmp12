@@ -1,8 +1,8 @@
 ### Repository Details
 This repository was created to fulfill the learning objectives of the CSAD course. Taking into account the requirements, the repository name is csad2425ki404mohmp12.
 
-### Task Details
-1. Create a GitHub repository with the name csad2425ki404mohmp12, where:
+### Task1 Details
+1. Create a GitHub repository with the nаme csad2425ki404mohmp12, where:
 YY1: 24
 YY2: 25
 Group: ki404
@@ -39,3 +39,18 @@ For the upcoming tasks, the following technologies, languages, and hardware will
 
 Programming Language: C++
 Hardware: Arduino Uno
+
+### Task 2: Details
+Design a simple communication schema where software (SW) acts as a client, hardware (HW) acts as a server, and communication occurs over UART.
+
+The client should send a message to the server through the UART interface. Upon receiving the message, the server should process it, apply modifications (e.g., reverse, append data, or any specific transformation), and send the modified message back to the client. The client then processes the returned message to verify the functionality.
+
+Create a YML configuration file to include the following functionalities:
+
+1. Build All Binaries: Ensure that all required binaries for both the client and server are built successfully. If additional scripts are required for the build process, include them in a dedicated ci/ directory.
+   
+2. Run Tests: Implement automated tests to validate the communication process, including message transmission, server-side processing, and response handling by the client.
+
+3. Generate Artifacts: Produce artifacts that contain the built binaries and comprehensive test reports. These artifacts should be stored for future analysis or deployment.
+
+This task ensures the reliability of the communication system, including the correctness of data exchange between the client and server. Proper CI/CD implementation via the YML file guarantees consistent building, testing, and artifact generation.
