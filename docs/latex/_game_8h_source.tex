@@ -1,0 +1,23 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\index{client/Game.h@{client/Game.h}}
+\mbox{\hyperlink{_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_serial_port_8h}{SerialPort.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_8h_a2ffb9a33ecf10813ebd765b845c34ef1}{saveGameState}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keyword}{const}\ std::string\&\ mode,\ \textcolor{keyword}{const}\ std::string\&\ player1Move,\ \textcolor{keyword}{const}\ std::string\&\ player2Move,\ \textcolor{keywordtype}{int}\ player1Score,\ \textcolor{keywordtype}{int}\ player2Score);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_game_8h_a4e895be636bcd1bec101ec97135fa5be}{loadGameState}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ std::string\&\ mode,\ std::string\&\ player1Move,\ std::string\&\ player2Move,\ \textcolor{keywordtype}{int}\&\ player1Score,\ \textcolor{keywordtype}{int}\&\ player2Score);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_game_8h_accc9183a62fa451df42fc6acb903955b}{validateMove}}(\textcolor{keyword}{const}\ std::string\&\ move);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_game_8h_a7010394f203248000ba250ceae900f65}{playGame}}(\mbox{\hyperlink{class_serial_port}{SerialPort}}\&\ serialPort);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_H}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#pragma\ once}}
+
+\end{DoxyCode}

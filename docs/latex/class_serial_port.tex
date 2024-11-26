@@ -1,0 +1,124 @@
+\doxysection{Serial\+Port Class Reference}
+\hypertarget{class_serial_port}{}\label{class_serial_port}\index{SerialPort@{SerialPort}}
+
+
+Manages serial port operations, including configuration and message sending/receiving.  
+
+
+
+
+{\ttfamily \#include $<$Serial\+Port.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_serial_port_a8c075fe67b7e57cd3c3958bacfec1dba}{Serial\+Port}} (const std\+::string \&port\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_serial_port}{Serial\+Port} object and attempts to open the specified port. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_serial_port_a8e09f366ed9b26b0456b66ae7bd8c702}{\texorpdfstring{$\sim$}{\string~}\+Serial\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that closes the port if it is open. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_serial_port_a633a0c13c38f7e61b17ae920a45d75dd}{configure\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Configures the port by setting state and timeouts. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_serial_port_a70f35813096ff812defa33777495d08f}{send\+Message}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Sends a message through the serial port. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_serial_port_a44be23a0bbaecb21862352df0f491a29}{receive\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Receives a message from the serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages serial port operations, including configuration and message sending/receiving. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_serial_port_a8c075fe67b7e57cd3c3958bacfec1dba}\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{SerialPort()}{SerialPort()}}
+{\footnotesize\ttfamily \label{class_serial_port_a8c075fe67b7e57cd3c3958bacfec1dba} 
+Serial\+Port\+::\+Serial\+Port (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{port\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_serial_port}{Serial\+Port} object and attempts to open the specified port. 
+
+Constructor for the \doxylink{class_serial_port}{Serial\+Port} class. Attempts to open the specified serial port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & The name of the port (e.\+g., "{}\+COM3"{}).\\
+\hline
+{\em port\+Name} & The name of the port to open (e.\+g., "{}\+COM3"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_port_a8e09f366ed9b26b0456b66ae7bd8c702}\index{SerialPort@{SerialPort}!````~SerialPort@{\texorpdfstring{$\sim$}{\string~}SerialPort}}
+\index{````~SerialPort@{\texorpdfstring{$\sim$}{\string~}SerialPort}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SerialPort()}{\string~SerialPort()}}
+{\footnotesize\ttfamily \label{class_serial_port_a8e09f366ed9b26b0456b66ae7bd8c702} 
+Serial\+Port\+::\texorpdfstring{$\sim$}{\string~}\+Serial\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor that closes the port if it is open. 
+
+Destructor for the \doxylink{class_serial_port}{Serial\+Port} class. Closes the port if it is open. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_serial_port_a633a0c13c38f7e61b17ae920a45d75dd}\index{SerialPort@{SerialPort}!configurePort@{configurePort}}
+\index{configurePort@{configurePort}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{configurePort()}{configurePort()}}
+{\footnotesize\ttfamily \label{class_serial_port_a633a0c13c38f7e61b17ae920a45d75dd} 
+bool Serial\+Port\+::configure\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configures the port by setting state and timeouts. 
+
+Configures the serial port by setting state and timeouts.
+
+\begin{DoxyReturn}{Returns}
+true if the port is successfully configured; false otherwise.
+
+true if the configuration succeeds; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_serial_port_a44be23a0bbaecb21862352df0f491a29}\index{SerialPort@{SerialPort}!receiveMessage@{receiveMessage}}
+\index{receiveMessage@{receiveMessage}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{receiveMessage()}{receiveMessage()}}
+{\footnotesize\ttfamily \label{class_serial_port_a44be23a0bbaecb21862352df0f491a29} 
+std\+::string Serial\+Port\+::receive\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Receives a message from the serial port. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The received message. 
+\end{DoxyReturn}
+\Hypertarget{class_serial_port_a70f35813096ff812defa33777495d08f}\index{SerialPort@{SerialPort}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily \label{class_serial_port_a70f35813096ff812defa33777495d08f} 
+bool Serial\+Port\+::send\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Sends a message through the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the message is successfully sent; false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the message was sent successfully; false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+client/\mbox{\hyperlink{_serial_port_8h}{Serial\+Port.\+h}}\item 
+client/\mbox{\hyperlink{_serial_port_8cpp}{Serial\+Port.\+cpp}}\end{DoxyCompactItemize}

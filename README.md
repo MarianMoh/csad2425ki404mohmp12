@@ -2,7 +2,7 @@
 This repository was created to fulfill the learning objectives of the CSAD course. Taking into account the requirements, the repository name is csad2425ki404mohmp12.
 
 ### Task Details
-1. Create a GitHub repository with the name csad2425ki404mohmp12, where:
+1. Create a GitHub repository with the nаme csad2425ki404mohmp12, where:
 YY1: 24
 YY2: 25
 Group: ki404
@@ -39,3 +39,35 @@ For the upcoming tasks, the following technologies, languages, and hardware will
 
 Programming Language: C++
 Hardware: Arduino Uno
+
+### Task 4: Documentation Implementation and Generation
+
+This task focuses on integrating detailed and professional documentation into the project using the Doxygen tool. The documentation will provide clear insights into the structure and functionality of the codebase, making it more accessible for developers and maintainers. Below are the detailed requirements and goals of this task:
+
+Objective
+Enhance code readability and maintainability by embedding Doxygen-compatible comments for all public-facing components of the codebase and generating comprehensive technical documentation from these comments.
+
+### Required Steps
+
+1. Prepare the Codebase:
+- Review all public interfaces and ensure they are properly defined.
+- Add Doxygen comments to all relevant sections of the code.
+
+2. Set Up Doxygen:
+- Install Doxygen on the development machine.
+- Create a Doxyfile configuration file to specify project settings (e.g., input directories, output format, included/excluded files).
+
+3. Generate Documentation:
+- Run the doxygen Doxyfile command to process the comments and create the output files.
+- If diagrams are required, ensure Graphviz is installed and linked with Doxygen.
+
+4. Validate Documentation:
+- Review the generated documentation for completeness and accuracy.
+- Address any missing or incorrect details in the comments and re-generate as needed.
+
+5. Deliverables:
+- Finalized HTML and PDF documentation files.
+- An updated project repository with all added Doxygen comments.
+
+### Project Goals
+This task will ensure that the project is well-documented, making it easier for new developers to onboard and for existing developers to maintain or extend the system. The generated documentation will serve as a reliable reference for understanding the overall architecture, individual component functionality, and interactions within the system.

@@ -1,0 +1,102 @@
+\doxysection{client/\+Game.cpp File Reference}
+\hypertarget{_game_8cpp}{}\label{_game_8cpp}\index{client/Game.cpp@{client/Game.cpp}}
+
+
+Contains functions for managing and playing the game, including saving/loading game state, validating moves, and interacting with the \doxylink{class_serial_port}{Serial\+Port}.  
+
+
+{\ttfamily \#include "{}game.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_game_8cpp_a2ffb9a33ecf10813ebd765b845c34ef1}{save\+Game\+State}} (const std\+::string \&filename, const std\+::string \&mode, const std\+::string \&player1\+Move, const std\+::string \&player2\+Move, int player1\+Score, int player2\+Score)
+\begin{DoxyCompactList}\small\item\em Saves the current game state to a file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_game_8cpp_a4e895be636bcd1bec101ec97135fa5be}{load\+Game\+State}} (const std\+::string \&filename, std\+::string \&mode, std\+::string \&player1\+Move, std\+::string \&player2\+Move, int \&player1\+Score, int \&player2\+Score)
+\begin{DoxyCompactList}\small\item\em Loads a previously saved game state from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_8cpp_a7010394f203248000ba250ceae900f65}{play\+Game}} (\mbox{\hyperlink{class_serial_port}{Serial\+Port}} \&serial\+Port)
+\begin{DoxyCompactList}\small\item\em Manages the main game loop and handles player interactions and game modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions for managing and playing the game, including saving/loading game state, validating moves, and interacting with the \doxylink{class_serial_port}{Serial\+Port}. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_game_8cpp_a4e895be636bcd1bec101ec97135fa5be}\index{Game.cpp@{Game.cpp}!loadGameState@{loadGameState}}
+\index{loadGameState@{loadGameState}!Game.cpp@{Game.cpp}}
+\doxysubsubsection{\texorpdfstring{loadGameState()}{loadGameState()}}
+{\footnotesize\ttfamily \label{_game_8cpp_a4e895be636bcd1bec101ec97135fa5be} 
+bool load\+Game\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::string \&}]{mode}{, }\item[{std\+::string \&}]{player1\+Move}{, }\item[{std\+::string \&}]{player2\+Move}{, }\item[{int \&}]{player1\+Score}{, }\item[{int \&}]{player2\+Score}{}\end{DoxyParamCaption})}
+
+
+
+Loads a previously saved game state from a file. 
+
+Loads the game state from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load the game state from. \\
+\hline
+{\em mode} & Reference to a string to store the loaded game mode. \\
+\hline
+{\em player1\+Move} & Reference to a string to store the loaded move of Player 1. \\
+\hline
+{\em player2\+Move} & Reference to a string to store the loaded move of Player 2. \\
+\hline
+{\em player1\+Score} & Reference to an integer to store the loaded score of Player 1. \\
+\hline
+{\em player2\+Score} & Reference to an integer to store the loaded score of Player 2. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game state was loaded successfully; false otherwise.
+\end{DoxyReturn}
+This function reads the game mode, players\textquotesingle{} moves, and scores from the specified file, restoring the game to a previous state. \Hypertarget{_game_8cpp_a7010394f203248000ba250ceae900f65}\index{Game.cpp@{Game.cpp}!playGame@{playGame}}
+\index{playGame@{playGame}!Game.cpp@{Game.cpp}}
+\doxysubsubsection{\texorpdfstring{playGame()}{playGame()}}
+{\footnotesize\ttfamily \label{_game_8cpp_a7010394f203248000ba250ceae900f65} 
+void play\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_serial_port}{Serial\+Port}} \&}]{serial\+Port}{}\end{DoxyParamCaption})}
+
+
+
+Manages the main game loop and handles player interactions and game modes. 
+
+Manages the game logic and communicates with the Arduino.
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial\+Port} & A reference to the \doxylink{class_serial_port}{Serial\+Port} object for sending and receiving messages to/from Arduino.\\
+\hline
+\end{DoxyParams}
+The function provides options for starting a new game or continuing a previous one, allows players to choose a game mode, and handles player moves and game results. It supports multiple game modes, including Man vs Man, Man vs AI, and AI vs AI, and saves game progress after each round. \Hypertarget{_game_8cpp_a2ffb9a33ecf10813ebd765b845c34ef1}\index{Game.cpp@{Game.cpp}!saveGameState@{saveGameState}}
+\index{saveGameState@{saveGameState}!Game.cpp@{Game.cpp}}
+\doxysubsubsection{\texorpdfstring{saveGameState()}{saveGameState()}}
+{\footnotesize\ttfamily \label{_game_8cpp_a2ffb9a33ecf10813ebd765b845c34ef1} 
+void save\+Game\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::string \&}]{mode}{, }\item[{const std\+::string \&}]{player1\+Move}{, }\item[{const std\+::string \&}]{player2\+Move}{, }\item[{int}]{player1\+Score}{, }\item[{int}]{player2\+Score}{}\end{DoxyParamCaption})}
+
+
+
+Saves the current game state to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save the game state. \\
+\hline
+{\em mode} & The game mode (e.\+g., "{}\+Player vs Player"{}, "{}\+Player vs AI"{}). \\
+\hline
+{\em player1\+Move} & The move of Player 1. \\
+\hline
+{\em player2\+Move} & The move of Player 2. \\
+\hline
+{\em player1\+Score} & The score of Player 1. \\
+\hline
+{\em player2\+Score} & The score of Player 2.\\
+\hline
+\end{DoxyParams}
+This function writes the game mode, players\textquotesingle{} moves, and their scores to a specified file, allowing the game to be resumed later. 
