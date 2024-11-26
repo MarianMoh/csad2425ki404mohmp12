@@ -47,7 +47,10 @@ The client should send a message to the server through the UART interface. Upon 
 
 Create a YML configuration file to include the following functionalities:
 
-Build All Binaries: Ensure that all required binaries for both the client and server are built successfully. If additional scripts are required for the build process, include them in a dedicated ci/ directory.
-Run Tests: Implement automated tests to validate the communication process, including message transmission, server-side processing, and response handling by the client.
-Generate Artifacts: Produce artifacts that contain the built binaries and comprehensive test reports. These artifacts should be stored for future analysis or deployment.
+1. Build All Binaries: Ensure that all required binaries for both the client and server are built successfully. If additional scripts are required for the build process, include them in a dedicated ci/ directory.
+   
+2. Run Tests: Implement automated tests to validate the communication process, including message transmission, server-side processing, and response handling by the client.
+
+3. Generate Artifacts: Produce artifacts that contain the built binaries and comprehensive test reports. These artifacts should be stored for future analysis or deployment.
+
 This task ensures the reliability of the communication system, including the correctness of data exchange between the client and server. Proper CI/CD implementation via the YML file guarantees consistent building, testing, and artifact generation.
