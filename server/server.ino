@@ -1,19 +1,17 @@
 void setup() {
-  Serial.begin(9600);  // Налаштування швидкості серійного зв’язку
+  Serial.begin(9600);  // Set the baud rate for serial communication
   while (!Serial) {
-    ;  // Очікуємо підключення серійного порту
+    ;  // Wait for the serial port to connect
   }
 }
 
 void loop() {
-  // Очікуємо отримання повідомлення
+  // Wait for a message to be received
   if (Serial.available() > 0) {
-    String message = Serial.readStringUntil('\n');  // Читання повідомлення до символу нового рядка
-    message += " Copy";  // Модифікація повідомлення, додаємо "AR" в кінці
-
-    // Відправлення модифікованого повідомлення назад клієнту
-    Serial.println(message);  // Повертаємо змінене повідомлення
-    
-    // Після одного з'єднання зупиняємося (якщо не потрібна подальша комунікація)
+    String message = Serial.readStringUntil('\n');  // Read the message until a newline character
+    message += " Copy";  // Modify the message by appending " Copy" to the end
+    // Send the modified message back to the client
+    Serial.println(message);  // Return the modified message
+    // Stop after one connection (if further communication is not required)
   }
 }
