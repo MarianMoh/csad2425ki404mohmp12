@@ -49,11 +49,11 @@ Enhance code readability and maintainability by embedding Doxygen-compatible com
 
 ### Required Steps
 
-1.Prepare the Codebase:
+1. Prepare the Codebase:
 - Review all public interfaces and ensure they are properly defined.
 - Add Doxygen comments to all relevant sections of the code.
 
-2.Set Up Doxygen:
+2. Set Up Doxygen:
 - Install Doxygen on the development machine.
 - Create a Doxyfile configuration file to specify project settings (e.g., input directories, output format, included/excluded files).
 
