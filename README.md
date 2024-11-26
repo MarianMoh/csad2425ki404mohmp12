@@ -40,17 +40,20 @@ For the upcoming tasks, the following technologies, languages, and hardware will
 Programming Language: C++
 Hardware: Arduino Uno
 
-### Task 2: Details
-Design a simple communication schema where software (SW) acts as a client, hardware (HW) acts as a server, and communication occurs over UART.
+### Task 5: Details
+-Testing Server and Client Code
+When testing server and client parts of an application, the main goal is to ensure that all components behave as expected under different scenarios.
 
-The client should send a message to the server through the UART interface. Upon receiving the message, the server should process it, apply modifications (e.g., reverse, append data, or any specific transformation), and send the modified message back to the client. The client then processes the returned message to verify the functionality.
+1. Server-Side Testing: This involves testing the server logic, such as request handling, database interactions, and API processing. You write unit tests for individual server functions and integration tests for the entire server behavior. For example, you might test how the server handles client requests or interacts with a database.
 
-Create a YML configuration file to include the following functionalities:
+2. Client-Side Testing: On the client side, you test UI components, user interactions, and communication with the server. Unit tests verify individual functions, such as form validations, while integration tests check how the client interacts with the server. Mocking server responses is often used to simulate communication during client testing.
 
-1. Build All Binaries: Ensure that all required binaries for both the client and server are built successfully. If additional scripts are required for the build process, include them in a dedicated ci/ directory.
-   
-2. Run Tests: Implement automated tests to validate the communication process, including message transmission, server-side processing, and response handling by the client.
+-Using OpenCppCoverage for Code Coverage
+OpenCppCoverage helps measure how much of your server and client code is tested. It provides coverage reports that show which lines of code were executed during testing.
 
-3. Generate Artifacts: Produce artifacts that contain the built binaries and comprehensive test reports. These artifacts should be stored for future analysis or deployment.
+1. How It Works: OpenCppCoverage instruments your server and client binaries to track which lines of code are executed during test runs. It generates a report showing the percentage of covered and uncovered code.
 
-This task ensures the reliability of the communication system, including the correctness of data exchange between the client and server. Proper CI/CD implementation via the YML file guarantees consistent building, testing, and artifact generation.
+2. Coverage Report: The report shows coverage percentages, such as "Cover 78%" and "Uncover 22%", indicating which parts of the server or client code have been tested and which have not.
+
+- Improving Test Coverage
+If you see a lot of uncovered code (e.g., 22% uncovered), you can improve testing by writing additional unit or integration tests to cover those parts, ensuring better validation of both server and client functionalities.
